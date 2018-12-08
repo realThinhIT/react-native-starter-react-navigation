@@ -8,7 +8,7 @@ export default (state = defaultState, action = {}) => {
       return {
         ...state,
         text: `Clicked!`
-      }
+      };
   }
 
   return state;

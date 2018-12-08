@@ -26,4 +26,4 @@ export const sceneCreator = (SceneComp, store) =>
           </Provider>
         );
       }
-    }
+    };

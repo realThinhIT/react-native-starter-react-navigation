@@ -1,3 +1,3 @@
-import { AppRoot } from './src/App.js';
+import { AppRoot } from './src/App';
 
 new AppRoot();

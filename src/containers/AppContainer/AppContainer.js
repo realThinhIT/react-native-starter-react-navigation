@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { View, Text, Button } from 'react-native';
+import { View, Text, TextInput } from 'react-native';
 
 class AppContainer extends React.Component {
   constructor(props) {
@@ -15,12 +15,28 @@ class AppContainer extends React.Component {
         justifyContent: 'center', 
         alignItems: 'center' 
       }}>
-        <Text>Hello! {this.props.example.text}</Text>
+        <Text style={{
+          fontSize: 20
+        }}>
+          Hello, {this.props.example.text ? this.props.example.text : `Unknown`}!
+        </Text>
 
-        <Button
-          title={`Click here!`}
-          onPress={() => this.props.dispatch({ type: `EXAMPLE_DISPATCH` })}
-        />
+        <View style={{
+          marginTop: 15
+        }}>
+          <Text>Please input your name:</Text>
+          <TextInput
+            onChangeText={newName => this.props.dispatch({ 
+              type: `EXAMPLE_DISPATCH`,
+              text: newName
+            })}
+            style={{
+              borderBottomWidth: 1,
+              borderBottomColor: 'grey',
+              textAlign: 'center'
+            }}
+          />
+        </View>
       </View>
     );
   }

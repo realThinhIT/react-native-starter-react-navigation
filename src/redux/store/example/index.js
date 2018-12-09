@@ -7,7 +7,7 @@ export default (state = defaultState, action = {}) => {
     case `EXAMPLE_DISPATCHED`:
       return {
         ...state,
-        text: `Clicked!`
+        text: action.text
       };
   }
 

@@ -8,7 +8,10 @@ function* onFetchExample(action) {
   //   yield put({type: "USER_FETCH_FAILED", message: e.message});
   // }
 
-  yield put({ type: `EXAMPLE_DISPATCHED` });
+  yield put({ 
+    type: `EXAMPLE_DISPATCHED`,
+    text: action.text
+  });
 }
 
 export default function*() {

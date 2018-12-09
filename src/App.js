@@ -1,6 +1,6 @@
-import { initRoutes } from './navigation/init.js';
+import { initRoutes } from './navigation/init';
 import { Navigation } from 'react-native-navigation';
-import { ROUTE_APP_ROOT } from './navigation/routes.js';
+import { ROUTE_APP_ROOT } from './navigation/routes';
 
 export class AppRoot {
   constructor() {

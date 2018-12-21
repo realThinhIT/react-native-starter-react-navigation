@@ -7,6 +7,15 @@ class AppContainer extends React.Component {
     super(props);
   }
 
+  static get options() {
+    return {
+      statusBarGap: {
+        isVisible: true,
+        backgroundColor: 'white'
+      }
+    };
+  }
+
   render() {
     return (
       <View style={{ 

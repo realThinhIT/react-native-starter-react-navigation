@@ -1,6 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { View } from 'react-native';
+import StatusBarGapComponent from '../components/common/StatusBarGap/StatusBarGap';
 
 export const sceneCreator = (SceneComp, store) =>
   () => 

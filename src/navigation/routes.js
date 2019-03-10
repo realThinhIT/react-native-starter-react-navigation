@@ -1,8 +1,14 @@
-import { createRoute } from '../helpers/routes';
 import AppContainer from '../containers/AppContainer/AppContainer';
+import { createStackNavigator, createAppContainer } from "react-navigation";
+import { sceneCreator } from './scene';
 
-export const ROUTE_APP_ROOT = 'root.App';
+const AppNavigator = createStackNavigator(
+  {
+    Home: sceneCreator(AppContainer)
+  },
+  {
+    initialRouteName: 'Home'
+  }
+);
 
-export default [
-  createRoute(ROUTE_APP_ROOT, AppContainer)
-];
+export const MainAppContainer = createAppContainer(AppNavigator);

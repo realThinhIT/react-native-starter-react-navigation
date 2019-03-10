@@ -7,6 +7,12 @@ class AppContainer extends React.Component {
     super(props);
   }
 
+  static get navigationOptions() {
+    return {
+      title: 'Home'
+    };
+  }
+
   static get options() {
     return {
       statusBarGap: {

@@ -6,12 +6,10 @@ import {
 import exampleSaga from './example';
 
 function* sagaHandler() {
-  while (true) {
-    yield all([
-      // Put your side effects here
-      yield exampleSaga()
-    ]);
-  }
+  yield all([
+    // Put your side effects here
+    ...exampleSaga,
+  ]);
 }
 
 export default function* rootSaga() {

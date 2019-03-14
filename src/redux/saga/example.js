@@ -14,6 +14,6 @@ function* onFetchExample(action) {
   });
 }
 
-export default function*() {
-  yield takeLatest('EXAMPLE_DISPATCH', onFetchExample);
-}
+export default [
+  takeLatest('EXAMPLE_DISPATCH', onFetchExample)
+];

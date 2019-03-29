@@ -1,5 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
+import _ from 'lodash';
 import StatusBarGapComponent from '../components/common/StatusBarGap/StatusBarGap';
 
 export const sceneCreator = (SceneComp) =>
@@ -8,8 +9,12 @@ export const sceneCreator = (SceneComp) =>
       super(props);
     }
 
-    static get navigationOptions() {
-      return SceneComp.navigationOptions;
+    static navigationOptions(...args) {
+      if (_.isFunction(SceneComp.navigationOptions)) {
+        return SceneComp.navigationOptions(...args);
+      } else {
+        return SceneComp.navigationOptions;
+      }
     }
 
     static get options() {
